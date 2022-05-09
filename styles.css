@@ -1,5 +1,7 @@
 html {
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
   }
 
   *, *:before, *:after {
@@ -33,19 +35,23 @@ html {
 .sb-dashboard, .sb-options{
     display: flex;
     color: white;
+
 }
 
-.sb-dashboard, .sb-options-option{
+.sb-options-option{
     gap:20px;
 }
 
 .sb-dashboard{
     font-size: 1.5rem;
+    align-items: center;
+    gap: 0px;
 }
 
 .sb-options{
     flex-direction: column;
     font-size: 1.2rem;
+    gap:10px;
 }
 
 .sb-options-option{
@@ -56,6 +62,7 @@ html {
 /* HEADER CONTENT */
 
 .header{
+    padding-left: 30px;
     grid-row: 1/2;
     grid-column: 2/3;
     background-color: rgb(238, 238, 238);
@@ -78,7 +85,7 @@ html {
     border-radius: 10px;
     padding: .25rem;
     border: none;
-    background-color:rgb(168, 168, 168);
+    background-color:rgb(202, 202, 202);
     width: 100%;
     
 }
@@ -89,20 +96,25 @@ html {
     width: 100%;
     align-items: center;
     justify-content: center;
+    gap: 15px;
+    font-weight: bold;
 }
 
 
 .header-welcome{
     display: grid;
-    grid-template: 1fr 1fr / 20px 1fr; /* make 20px width of svg*/
+    grid-template: 1fr 1fr / 72px 1fr; /* make 20px width of svg*/
     justify-items: start;
     align-items: center;
 
 }
 
 .header-welcome-logo{
+ 
+    margin-top: -30px;
     grid-row:1/-1;
     grid-column: 1/2;
+    transform: translate(0px,20px);
 }
 
 .header-welcome-hi{
@@ -116,6 +128,7 @@ html {
 .header-welcome-user{
     grid-row:2/3;
     grid-column: 2/3;
+    font-weight: bold;
 
 }
 
@@ -139,7 +152,7 @@ html {
 .main-content{
     grid-row: 2/3;
     grid-column: 2/3;
-    background-color: rgb(192, 192, 192);
+    background-color: rgb(211, 211, 211);
     /* Settings for wrapper grid*/
 
     display:grid;
@@ -148,14 +161,16 @@ html {
 
 }
 
+
+
 .mc-projects-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     grid-template-rows: 30px;
     grid-auto-rows: minmax(100px, 1fr);
     /* margin and gap match between contrainer and projects to make header not have equal gap*/
-    gap: 00px;
-    margin: 10px 30px;
+    gap: 0px;
+    margin: 20px 30px;
     margin-right: 0px;
     grid-row: 1/-1;
 
@@ -164,9 +179,9 @@ html {
 
 .mc-the-projects{
     background-color: white;
-    border-left: 8px solid rgb(223, 82, 0);
+    border-left: 8px solid hsl(44, 77%, 53%);
     border-radius: 8px;
-    margin: 0 20px 20px;
+    margin: 5px 20px 20px;
 
 }
 
@@ -175,6 +190,7 @@ html {
     justify-self: start;
     align-self: start;
     margin: 5px 20px;
+    font-weight: bold;
 }
 
 .mc-announcements-container, .mc-trending-container{
@@ -183,7 +199,7 @@ html {
     grid-auto-rows: minmax(100px, 1fr);
     /* margin and gap match between contrainer and projects to make header not have equal gap*/
     gap: 0px;
-    margin: 10px 20px;
+    margin: 20px 20px;
     margin-left: 0px;
 
 }
@@ -192,7 +208,7 @@ html {
     display: grid;
     min-height: 200px;
     background-color: white;
-    margin: 0 20px 20px;
+    margin: 5px 20px 20px;
     padding: 0px 30px;
     border-radius: 8px;
 
